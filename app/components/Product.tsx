@@ -53,9 +53,9 @@ export default function Product() {
             </div>
 
             {/* Product Mockups */}
-            <div className="relative flex flex-col md:flex-row items-center justify-center gap-10 mt-12">
+            <div className="flex flex-col md:flex-row items-center justify-between gap-10 mt-12">
                {/* Laptop Mockup */}
-               <div className="w-full md:w-3/4 rounded-xl overflow-hidden shadow-2xl relative p-">
+               <div className="w-full md:w-3/4 shrink-0 rounded-xl overflow-hidden shadow-2xl">
                   <div className="relative">
                      <Image
                         src={img1}
@@ -68,7 +68,7 @@ export default function Product() {
                </div>
 
                {/* Mobile Mockup */}
-               <div className="w-40 md:w-56 rounded-2xl overflow-hidden shadow-xl border-8 border-gray-800 relative">
+               <div className="w-40 md:w-full rounded-2xl overflow-hidden shadow-xl border-8 border-gray-800 relative">
                   <div className="relative h-80">
                      <Image
                         src={img2}
