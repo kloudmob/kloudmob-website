@@ -1,27 +1,35 @@
-import { FiBook, FiShoppingCart, FiBriefcase } from "react-icons/fi";
+import { FiBook, FiShoppingCart, FiBriefcase, FiHeart, FiDollarSign, FiHome, FiTruck, FiShield } from "react-icons/fi";
 
 type UseCase = {
   name: string;
-  desc: string;
   icon: React.ReactNode;
 };
 
 export default function UseCases() {
   const cases: UseCase[] = [
     {
-      name: "Education",
-      desc: "Enable schools to manage devices securely with tailored solutions for digital learning environments.",
-      icon: <FiBook className="text-3xl" />
+      name: "Healthcare",
+      icon: <FiHeart className="text-3xl" />
     },
     {
       name: "Retail",
-      desc: "Manage point-of-sale systems and interactive kiosks at scale with reliable device management.",
       icon: <FiShoppingCart className="text-3xl" />
     },
     {
-      name: "Enterprises",
-      desc: "Support remote teams and streamline IT operations with enterprise-grade device management.",
-      icon: <FiBriefcase className="text-3xl" />
+      name: "Finance",
+      icon: <FiDollarSign className="text-3xl" />
+    },
+    {
+      name: "Hospitality",
+      icon: <FiHome className="text-3xl" />
+    },
+    {
+      name: "Logistics",
+      icon: <FiTruck className="text-3xl" />
+    },
+    {
+      name: "Security",
+      icon: <FiShield className="text-3xl" />
     },
   ];
 
@@ -29,9 +37,9 @@ export default function UseCases() {
     <section id="usecases" className="py-20 px-6 bg-gradient-to-b from-white to-gray-50">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
-          <h3 className="text-4xl font-bold text-gray-800 mb-4">Who Uses Auro24?</h3>
+          <h3 className="text-4xl font-bold text-gray-800 mb-4">Who Uses Kloudmob?</h3>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Auro24 serves diverse industries with tailored solutions for their unique device management needs.
+            Startups, growing businesses, and enterprises that want reliable, scalable digital solutions.
           </p>
         </div>
 
@@ -46,8 +54,7 @@ export default function UseCases() {
                   {c.icon}
                 </div>
               </div>
-              <h4 className="text-xl font-semibold text-gray-800 mb-3 text-center">{c.name}</h4>
-              <p className="text-gray-600 text-center">{c.desc}</p>
+              <h4 className="text-xl font-semibold text-gray-800 text-center">{c.name}</h4>
             </div>
           ))}
         </div>

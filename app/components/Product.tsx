@@ -23,17 +23,17 @@ export default function Product() {
       },
       {
          title: "Scalable",
-         desc: "From small teams to enterprises, Auro24 grows with you.",
+         desc: `From small teams to enterprises, ${process.env.SITE_NAME} grows with you.`,
          icon: <FiBarChart2 className="text-3xl text-blue-600" />
       },
    ];
 
    return (
-      <section id="product" className="py-20 px-6 bg-gradient-to-br from-gray-50 to-blue-50">
+      <section id="product" className="py-20 px-6 bg-linear-to-br from-gray-50 to-blue-50">
          <div className="max-w-6xl mx-auto text-center">
-            <h3 className="text-4xl font-bold mb-6 text-gray-800">Meet Auro24</h3>
+            <h3 className="text-4xl font-bold mb-6 text-gray-800">Meet {process.env.SITE_NAME}</h3>
             <p className="text-lg text-gray-600 mb-12 max-w-3xl mx-auto">
-               Auro24 is Kloudmob&apos;s enterprise mobility solution, designed to simplify IT operations
+               {process.env.SITE_NAME} is Kloudmob&apos;s enterprise mobility solution, designed to simplify IT operations
                and keep your organization secure and productive.
             </p>
 
@@ -82,7 +82,7 @@ export default function Product() {
             </div>
 
             <p className="text-gray-500 text-sm mt-6">
-               Auro24 web dashboard & mobile app interface
+               {process.env.SITE_NAME} web dashboard & mobile app interface
             </p>
          </div>
       </section>

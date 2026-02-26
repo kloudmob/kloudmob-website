@@ -3,7 +3,11 @@
 import { useState, useEffect, MouseEvent } from 'react';
 import { FiMenu, FiX } from 'react-icons/fi';
 
-export default function Navbar() {
+interface NavbarProps {
+    siteName?: string;
+}
+
+export default function Navbar({ siteName }: NavbarProps) {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [isScrolled, setIsScrolled] = useState(false);
     const [prevScrollPos, setPrevScrollPos] = useState(0);
@@ -37,7 +41,6 @@ export default function Navbar() {
             window.history.pushState(null, '', targetId);
         }
     };
-
     return (
         <>
             <nav className={`flex justify-between items-center px-6 py-4 sticky top-0 z-50 transition-all bg-white duration-300 ${isScrolled
@@ -69,7 +72,7 @@ export default function Navbar() {
                             onClick={(e) => handleSmoothScroll(e, '#product')}
                             className="text-gray-700 hover:text-blue-600 transition-colors"
                         >
-                            Auro24
+                            {siteName}
                         </a>
                     </li>
                     <li>
@@ -130,7 +133,7 @@ export default function Navbar() {
                                 onClick={(e) => handleSmoothScroll(e, '#product')}
                                 className="block py-2 text-gray-700 hover:text-blue-600 transition-colors"
                             >
-                                Auro24
+                                {process.env.SITE_NAME}
                             </a>
                         </li>
                         <li>

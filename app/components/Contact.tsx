@@ -2,12 +2,12 @@ import { FiMail, FiPhone, FiMessageSquare, FiArrowRight } from "react-icons/fi";
 
 export default function Contact() {
   return (
-    <section id="contact" className="py-20 px-6 bg-gradient-to-br from-blue-600 to-blue-800 text-white">
+    <section id="contact" className="py-20 px-6 bg-linear-to-br from-blue-600 to-blue-800 text-white">
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-12">
           <h3 className="text-4xl font-bold mb-6">Get in Touch</h3>
           <p className="text-xl opacity-90 max-w-2xl mx-auto">
-            Want to know more about Auro24? We&apos;d love to hear from you and answer any questions.
+            Want to know more about {process.env.SITE_NAME}? We&apos;d love to hear from you and answer any questions.
           </p>
         </div>
 

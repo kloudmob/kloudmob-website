@@ -2,7 +2,8 @@ import type { NextConfig } from "next";
 import path from "path";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  output: 'export',
+
   webpack: (config) => {
     config.resolve = config.resolve || {};
     config.resolve.alias = config.resolve.alias || {};
@@ -10,7 +11,6 @@ const nextConfig: NextConfig = {
     return config;
   },
 
-  // Add this images configuration
   images: {
     formats: ['image/webp', 'image/avif'],
     dangerouslyAllowSVG: true,
@@ -21,7 +21,7 @@ const nextConfig: NextConfig = {
         hostname: '**',
       },
     ],
-    unoptimized: process.env.NODE_ENV === 'development' ? true : false,
+    unoptimized: true,
   },
 };
 

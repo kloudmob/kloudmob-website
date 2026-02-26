@@ -3,26 +3,41 @@ import bannerImg from '../assets/banner (3).jpg';
 
 export default function Hero() {
     return (
-        <section id='home'
-            className="relative text-center px-6 overflow-hidden h-screen flex items-center justify-center"
-        >
-            <Image
-                className='absolute bottom-0 left-0 z-10 w-full h-full'
-                src={bannerImg}
-                alt="banner"
-                layout="responsive"
-                objectFit="cover" />
+        <section id='home' className="relative h-screen flex items-center justify-center overflow-hidden">
+            {/* Background */}
+            <div className="absolute inset-0">
+                <Image
+                    src={bannerImg}
+                    alt="banner"
+                    fill
+                    className="object-cover"
+                    priority
+                />
+                <div className="absolute inset-0 bg-black/50" />
+            </div>
 
-            <div className='relative z-10 bg-black/10 backdrop-blur p-20 rounded-xl'>
-                <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                    Simplifying Mobility with <span className="text-blue-600">Auro24</span>
-                </h2>
-                <p className="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto mb-8">
-                    Kloudmob builds technology that empowers organizations to manage devices, stay secure, and be productive.
-                </p>
-                <a href="#product" className="px-6 py-3 bg-blue-600 text-white rounded-xl shadow hover:bg-blue-700">
-                    Discover Auro24
-                </a>
+            {/* Content */}
+            <div className="relative z-10 container mx-auto px-6">
+                <div className="text-center">
+                    <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+                        <span className='text-3xl md:text-5xl'>Empowering Ideas.</span>
+                        <span className="block text-blue-500">
+                            Engineering Digital Excellence.
+                        </span>
+                    </h1>
+
+                    <p className="max-w-3xl mx-auto text-lg md:text-xl text-gray-200 mb-10 leading-relaxed">
+                        We build user-friendly, robust, and scalable mobile and web applications.
+                        Helping businesses turn ideas into powerful digital solutions.
+                    </p>
+
+                    <a
+                        href="#product"
+                        className="inline-block px-8 py-4 bg-blue-600 text-white rounded-lg font-semibold text-lg hover:bg-blue-700 transition-colors duration-300 shadow-lg"
+                    >
+                        Discover {process.env.SITE_NAME}
+                    </a>
+                </div>
             </div>
         </section>
     );
